@@ -2,7 +2,7 @@ from __future__ import annotations
 import asyncio
 import json
 import os
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -13,7 +13,7 @@ from agent.publisher.github_publisher import push_files_to_github
 from agent.publisher.json_writer import write_week_json
 from agent.scoring.claude_scorer import ClaudeScorer
 from agent.scoring.dedup import load_recent_shown_links
-from agent.scoring.models import WeekData
+from agent.scoring.models import CuratedEvent, WeekData
 from agent.sources.parisdata import ParisDataSource
 from agent.sources.ticketmaster import TicketmasterSource
 from agent.sources.viparis import ViparisSource
@@ -25,6 +25,40 @@ _GH_REPO = "richaqp/sortirs-paris"
 def next_week_range() -> tuple[date, date]:
     today = date.today()
     return today + timedelta(days=1), today + timedelta(days=8)
+
+
+def _load_manual_events(repo_root: Path, start: date, end: date) -> list[CuratedEvent]:
+    path = repo_root / "profiles" / "manual_events.json"
+    if not path.exists():
+        return []
+    try:
+        items = json.loads(path.read_text())
+    except Exception:
+        return []
+    events = []
+    for i, ev in enumerate(items):
+        fi = date.fromisoformat(ev["fecha_inicio"])
+        fe_raw = ev.get("fecha_fin")
+        fe = date.fromisoformat(fe_raw) if fe_raw else None
+        if fi > end or (fe or fi) < start:
+            continue
+        events.append(CuratedEvent(
+            id=f"manual_{i:03d}",
+            titulo_fr=ev["titulo_fr"],
+            titulo_es=ev.get("titulo_es", ev["titulo_fr"]),
+            fecha_inicio=fi,
+            fecha_fin=fe if fe and fe != fi else None,
+            lugar=ev.get("lugar", "Paris"),
+            costo=ev.get("costo", "TBA"),
+            tipo_publico=ev.get("tipo_publico", "Familia"),
+            link=ev["link"],
+            imagen=ev.get("imagen"),
+            fuente="manual",
+            score=ev.get("score", 8),
+            razon=ev.get("razon", ""),
+            tags=ev.get("tags", []),
+        ))
+    return events
 
 
 def _week_id(d: date) -> str:
@@ -88,6 +122,17 @@ async def run(
     print(f"\n  [scorer] Top {len(curated)} seleccionados:")
     for ev in curated:
         print(f"    [{ev.score}] {ev.titulo_fr[:55]:55s} — {ev.razon[:65]}")
+
+    # Add manual events (bypass scorer, always included if in date range)
+    manual = _load_manual_events(_REPO_ROOT, start, end)
+    if manual:
+        manual_links = {e.link for e in curated}
+        for ev in manual:
+            if ev.link not in manual_links:
+                curated.append(ev)
+                manual_links.add(ev.link)
+        curated.sort(key=lambda e: e.score, reverse=True)
+        print(f"  [manual] +{len(manual)} eventos manuales añadidos")
 
     week_data = WeekData(
         week_id=_week_id(start),

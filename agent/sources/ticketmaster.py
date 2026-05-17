@@ -110,6 +110,16 @@ class TicketmasterSource(AbstractSource):
                         next((img["url"] for img in images), None),
                     )
 
+                    # Ticket availability
+                    status_code = ev.get("dates", {}).get("status", {}).get("code", "")
+                    disponibilidad = {
+                        "onsale": "Entradas disponibles",
+                        "offsale": "Sin entradas — verificar reventa",
+                        "cancelled": "Cancelado",
+                        "postponed": "Postpuesto",
+                        "rescheduled": "Reprogramado",
+                    }.get(status_code)
+
                     seen.add(url_ev)
                     try:
                         events.append(Event(
@@ -121,6 +131,7 @@ class TicketmasterSource(AbstractSource):
                             costo=costo,
                             imagen=imagen,
                             fuente="ticketmaster",
+                            disponibilidad=disponibilidad,
                         ))
                     except Exception:
                         continue

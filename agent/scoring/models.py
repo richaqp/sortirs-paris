@@ -32,6 +32,7 @@ class CuratedEvent(BaseModel):
     score: int
     razon: str
     tags: list[str]
+    disponibilidad: str | None = None
 
 
 class WeekData(BaseModel):

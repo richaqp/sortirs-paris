@@ -1,0 +1,30 @@
+[
+  {
+    "titulo_fr": "Paris Card Show 2026",
+    "titulo_es": "París Card Show 2026 — Tarjetas deportivas, Pokémon y coleccionables",
+    "fecha_inicio": "2026-05-23",
+    "fecha_fin": "2026-05-24",
+    "lugar": "Paris Espace Champerret",
+    "costo": "TBA",
+    "link": "https://www.pariscardshow.fr/",
+    "imagen": null,
+    "score": 8,
+    "razon": "El mayor salón francés de tarjetas deportivas, Pokémon y Magic. Ideal para la teen coleccionista y para descubrir algo completamente nuevo como familia. Más de 120 expositores.",
+    "tags": ["familia", "teen", "festival", "salon-publico"],
+    "tipo_publico": "Familia"
+  },
+  {
+    "titulo_fr": "Exposition Titanic — L'expérience immersive",
+    "titulo_es": "Exposición inmersiva del Titanic",
+    "fecha_inicio": "2026-05-01",
+    "fecha_fin": "2026-08-31",
+    "lugar": "Paris — verificar venue actual",
+    "costo": "TBA",
+    "link": "https://www.titanic-exhibition.com/",
+    "imagen": null,
+    "score": 8,
+    "razon": "Exposición inmersiva con artefactos reales del Titanic. Historia + emoción + narrativa dramática — el formato que la familia adora. Especialmente para la esposa y la teen. ⚠️ Verificar URL y venue actuales.",
+    "tags": ["inmersivo", "museo", "familia", "teen"],
+    "tipo_publico": "Familia"
+  }
+]

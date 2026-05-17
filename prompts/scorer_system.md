@@ -49,6 +49,7 @@ merece score 8–10. Un evento opuesto merece 0–2.
 - Ciencia y educación interactiva: talleres STEM, planetarios, museos participativos
 - Talleres creativos: manualidades, arte, cocina, escritura
 - Cultura hispana/latina: cualquier evento con conexión al mundo hispanohablante
+- **Gimnasia y acrobacia**: competiciones, espectáculos y eventos de gimnasia artística, rítmica, GRS, acrobática, trampolín — ambas hijas han practicado gimnasia desde pequeñas
 
 ## Anti-patrones estrictos (score 0–2)
 
@@ -57,6 +58,7 @@ merece score 8–10. Un evento opuesto merece 0–2.
 - Conferencias académicas o políticas sin componente participativo
 - Eventos con restricción 18+ o exclusivamente para adultos
 - Congresses profesionales especializados
+- **Eventos específicamente para niños menores de 11 años** (0-5 ans, 5-10 ans, petite enfance, bébés, maternelle, crèche) → la hija menor tiene 12+ y estos eventos no son apropiados para ninguna de las dos
 
 ## Criterio de puntuación (0–10)
 

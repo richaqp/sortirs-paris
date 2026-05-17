@@ -4,7 +4,7 @@ from typing import Literal
 from pydantic import BaseModel, HttpUrl, field_validator
 
 TipoPublico = Literal["Familia", "Adolescentes", "Hispano/Latino", "Salón masivo", "Deportivo"]
-Fuente = Literal["viparis", "ticketmaster", "parisdata"]
+Fuente = Literal["viparis", "ticketmaster", "parisdata", "manual"]
 
 
 class Event(BaseModel):
@@ -17,6 +17,7 @@ class Event(BaseModel):
     costo: str = "TBA"
     fuente: Fuente
     imagen: str | None = None
+    disponibilidad: str | None = None
 
     @field_validator("evento", "lugar", "costo", mode="before")
     @classmethod

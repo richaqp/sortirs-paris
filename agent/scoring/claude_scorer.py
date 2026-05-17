@@ -131,6 +131,7 @@ class ClaudeScorer:
                 link=ev.link,
                 imagen=ev.imagen,
                 fuente=ev.fuente,
+                disponibilidad=ev.disponibilidad,
                 score=s.score,
                 razon=s.razon,
                 tags=s.tags,

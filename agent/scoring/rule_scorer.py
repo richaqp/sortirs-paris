@@ -39,10 +39,15 @@ _INTERESTS: list[tuple[str, list[str], str]] = [
         "archéologie", "beaux-arts", "culture",
     ], "exposición cultural"),
     ("deporte", [
-        "sport", "football", "basket", "tennis", "natation", "gym",
+        "sport", "football", "basket", "tennis", "natation",
         "athlétisme", "handball", "rugby", "tournoi", "compétition",
         "match", "sportif",
     ], "deporte"),
+    ("gimnasia", [
+        "gymnast", "gymnastics", "gymnastique", "gym artistique", "gym rythmique",
+        "grs", "acrobat", "trampoline", "agrès", "poutre", "barres asymétriques",
+        "sol artistique", "saut de cheval", "compétition gym",
+    ], "gimnasia"),
     ("festival", [
         "festival", "fête", "foire", "braderie", "marché de noël",
         "carnaval", "parade",
@@ -66,12 +71,20 @@ _ANTI_PATTERNS = [
     r"\bmobilier\b",
     r"\béquipement industriel\b",
     r"\bcongr[eè]s\b.*\bprofess",
-    r"\bsalon\b.*\bprofess",   # "salon professionnel" pero NO "salon du chocolat"
+    r"\bsalon\b.*\bprofess",
     r"\bsommet\b.*\bchefs?\b",
     r"\bconférence\b.*\bexpert",
     r"\bexclusiv.*\badulte",
     r"\b18\+\b",
     r"\binterdit.*mineur",
+    # Eventos para menores de 11 años — hija menor tiene 12+
+    r"\b[0-9]-10\s*ans\b",
+    r"\b[0-9]-8\s*ans\b",
+    r"\b[0-9]-6\s*ans\b",
+    r"\bpetite enfance\b",
+    r"\bcrèche\b",
+    r"\bmaternelle\b",
+    r"\btout[-\s]petits?\b",
 ]
 
 # Salones grand public que SON bienvenidos (override anti-pattern)

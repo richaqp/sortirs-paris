@@ -9,10 +9,11 @@ export type CuratedEvent = {
   tipo_publico: string;
   link: string;
   imagen: string | null;
-  fuente: "parisdata" | "ticketmaster" | "viparis";
+  fuente: "parisdata" | "ticketmaster" | "viparis" | "manual";
   score: number;
   razon: string;
   tags: string[];
+  disponibilidad: string | null;
 };
 
 export type WeekData = {
