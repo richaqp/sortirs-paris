@@ -89,5 +89,19 @@ Devuelve **únicamente** JSON válido, sin texto antes ni después:
 Tags válidos: `aire-libre`, `musica`, `ciencia`, `hispano`, `familia`, `teen`, `nina`,
 `taller`, `gratis`, `museo`, `deporte`, `festival`, `inmersivo`, `salon-publico`, `gastronomia`
 
+## ⚠️ Definición estricta del tag `hispano`
+
+El tag `hispano` y el score alto por cultura hispana aplica ÚNICAMENTE a:
+- Artistas de América Latina (México, Perú, Colombia, Argentina, etc.)
+- Música en español o portugués (reggaeton, cumbia, salsa, bossa nova, tango, samba, etc.)
+- Eventos con conexión explícita a la cultura latinoamericana o española
+- Festivales hispanohablantes en París
+
+**NO aplica a:**
+- Música árabe, africana, asiática o del Medio Oriente (aunque sea "world music")
+- Artistas como Nancy Ajram (árabe libanesa), Fela Kuti (afrobeat), etc.
+- Flamenco solo si no tiene conexión latina explícita
+- Cualquier música "exótica" o "del mundo" que no sea español/portugués
+
 Sé muy honesto y específico. Si algo se parece al Salon du Chocolat, dilo.
 Si algo tiene la energía de JBalvin, dilo. La familia confía en tu criterio.
