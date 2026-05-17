@@ -1,7 +1,7 @@
 [
   {
     "titulo_fr": "Paris Card Show 2026",
-    "titulo_es": "París Card Show 2026 — Tarjetas deportivas, Pokémon y coleccionables",
+    "titulo_es": "París Card Show — Tarjetas deportivas, Pokémon y coleccionables",
     "fecha_inicio": "2026-05-23",
     "fecha_fin": "2026-05-24",
     "lugar": "Paris Espace Champerret",
@@ -14,17 +14,17 @@
     "tipo_publico": "Familia"
   },
   {
-    "titulo_fr": "Exposition Titanic — L'expérience immersive",
-    "titulo_es": "Exposición inmersiva del Titanic",
-    "fecha_inicio": "2026-05-01",
+    "titulo_fr": "La Légende du Titanic — Expérience immersive",
+    "titulo_es": "La Leyenda del Titanic — Experiencia inmersiva",
+    "fecha_inicio": "2026-03-31",
     "fecha_fin": "2026-08-31",
-    "lugar": "Paris — verificar venue actual",
-    "costo": "TBA",
-    "link": "https://www.titanic-exhibition.com/",
+    "lugar": "Grande Halle, Parc de la Villette (Métro: Porte de Pantin)",
+    "costo": "Desde 14.90€",
+    "link": "https://www.lavillette.com/manifestations/legende-titanic-25-26/",
     "imagen": null,
-    "score": 8,
-    "razon": "Exposición inmersiva con artefactos reales del Titanic. Historia + emoción + narrativa dramática — el formato que la familia adora. Especialmente para la esposa y la teen. ⚠️ Verificar URL y venue actuales.",
-    "tags": ["inmersivo", "museo", "familia", "teen"],
+    "score": 9,
+    "razon": "3,000 m² de experiencia inmersiva con VR, artefactos reales, reconstrucción a escala del muelle de Southampton. Historia + emoción + tecnología — exactamente el formato que la familia adora (patrón Titanic). Ideal para la esposa y la teen. Ya atrajo +1 millón de visitantes en Europa.",
+    "tags": ["inmersivo", "familia", "teen", "museo"],
     "tipo_publico": "Familia"
   }
 ]
