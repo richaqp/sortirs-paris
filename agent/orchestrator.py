@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 from agent.models import Event
 from agent.notion_writer import NotionWriter
+from agent.publisher.json_writer import write_week_json
 from agent.scoring.claude_scorer import ClaudeScorer
 from agent.scoring.dedup import load_recent_shown_links
 from agent.scoring.models import WeekData
@@ -95,8 +96,12 @@ async def run(
         events=curated,
     )
 
+    # Always write JSON (needed for web app dev even in dry-run)
+    json_path = write_week_json(week_data, _REPO_ROOT)
+    print(f"\nJSON escrito: {json_path.relative_to(_REPO_ROOT)}")
+
     if dry_run:
-        print("\n[dry-run] Notion y git push omitidos.")
+        print("[dry-run] Notion y git push omitidos.")
         return week_data
 
     # Write to Notion (all unique events, not just curated)
