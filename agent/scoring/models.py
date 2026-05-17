@@ -12,9 +12,9 @@ Tag = Literal[
 class ScoredEvent(BaseModel):
     id: str
     score: int
-    titulo_es: str
-    razon: str
-    tags: list[str]
+    titulo_es: str = ""
+    razon: str = ""
+    tags: list[str] = []
 
 
 class CuratedEvent(BaseModel):

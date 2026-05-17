@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 from agent.models import Event
 from agent.notion_writer import NotionWriter
-from agent.scoring.rule_scorer import EventScorer
+from agent.scoring.claude_scorer import ClaudeScorer
 from agent.scoring.dedup import load_recent_shown_links
 from agent.scoring.models import WeekData
 from agent.sources.parisdata import ParisDataSource
@@ -74,9 +74,10 @@ async def run(
     fresh = [ev for ev in unique if ev.link not in recent_links]
     print(f"\nTotal únicos: {len(unique)} ({len(unique) - len(fresh)} ya mostrados en semanas previas → {len(fresh)} frescos)")
 
-    # Score with rules-based scorer
-    scorer = EventScorer()
-    print(f"  [scorer] Evaluando {len(fresh)} eventos con reglas…")
+    # Score with Claude
+    api_key = os.getenv("ANTHROPIC_API_KEY", "")
+    scorer = ClaudeScorer(api_key=api_key)
+    print(f"  [scorer] Evaluando {len(fresh)} eventos con Claude {scorer._model}…")
     scored = await scorer.score_all(fresh)
     curated = scorer.merge(fresh, scored, top_k=top_k)
 

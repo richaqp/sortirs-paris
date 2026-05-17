@@ -59,19 +59,26 @@ _INTERESTS: list[tuple[str, list[str], str]] = [
 
 # ── Anti-patrones → score máximo 2 ──────────────────────────────────────────
 _ANTI_PATTERNS = [
-    r"\bprofessionnel(le)?s?\b",
+    r"\bréservé aux professionnels\b",
+    r"\bprofessionnel(le)?s? uniquement\b",
     r"\bb2b\b",
     r"\bfranchis",
     r"\bmobilier\b",
-    r"\béquipement\b",
-    r"\bindustr",
+    r"\béquipement industriel\b",
     r"\bcongr[eè]s\b.*\bprofess",
-    r"\bsalon\b.*\bprofess",
+    r"\bsalon\b.*\bprofess",   # "salon professionnel" pero NO "salon du chocolat"
     r"\bsommet\b.*\bchefs?\b",
     r"\bconférence\b.*\bexpert",
     r"\bexclusiv.*\badulte",
     r"\b18\+\b",
     r"\binterdit.*mineur",
+]
+
+# Salones grand public que SON bienvenidos (override anti-pattern)
+_SALON_GRAND_PUBLIC = [
+    "chocolat", "agriculture", "gastronomie", "livre", "bande dessinée",
+    "jeux", "jouet", "jardin", "bien-être", "musique", "enfant",
+    "famille", "créat", "art", "photo",
 ]
 
 # ── Razones en español según tags ────────────────────────────────────────────
@@ -103,8 +110,12 @@ _DEFAULT_RAZONES: dict[str, str] = {
 def _score_event(ev: Event) -> ScoredEvent:
     text = (ev.evento + " " + ev.lugar + " " + (ev.tipo_publico or "")).lower()
 
-    # Check anti-patterns first
-    is_antipattern = any(re.search(pat, text, re.IGNORECASE) for pat in _ANTI_PATTERNS)
+    # Check anti-patterns (but override if it's a grand public salon)
+    is_grand_public_salon = any(kw in text for kw in _SALON_GRAND_PUBLIC)
+    is_antipattern = (
+        not is_grand_public_salon
+        and any(re.search(pat, text, re.IGNORECASE) for pat in _ANTI_PATTERNS)
+    )
 
     matched_tags: list[str] = []
     for tag, keywords, _ in _INTERESTS:

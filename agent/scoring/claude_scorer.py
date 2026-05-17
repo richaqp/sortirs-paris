@@ -2,6 +2,7 @@ from __future__ import annotations
 import asyncio
 import json
 import re
+import time
 from pathlib import Path
 
 import anthropic
@@ -9,9 +10,11 @@ import anthropic
 from agent.models import Event
 from agent.scoring.models import ScoredEvent, CuratedEvent, WeekData
 
-_SYSTEM_PROMPT = (Path(__file__).parent.parent.parent / "prompts" / "scorer_system.md").read_text()
-_BATCH_SIZE = 10
-_MAX_CONCURRENCY = 5
+_PROMPTS_DIR = Path(__file__).parent.parent.parent / "prompts"
+_SYSTEM_PROMPT = (_PROMPTS_DIR / "scorer_system.md").read_text()
+_BATCH_SIZE = 5          # smaller batches → less output tokens per call
+_MAX_CONCURRENCY = 2    # Tier 1 new accounts: strict concurrent connection limit
+_MAX_TOKENS = 2048      # enough for 5 events × ~300 tokens each
 _MODEL = "claude-haiku-4-5"
 
 
@@ -27,12 +30,23 @@ def _event_to_dict(ev: Event, idx: int) -> dict:
     }
 
 
+def _normalize_result(r: dict) -> dict:
+    """Normalize field name variations Claude might use."""
+    # Normalize razon (handles accented variants)
+    for alt in ("razón", "reason", "descripcion", "descripción", "explanation"):
+        if alt in r and "razon" not in r:
+            r["razon"] = r.pop(alt)
+    r.setdefault("razon", "Sin descripción disponible.")
+    r.setdefault("titulo_es", r.get("titulo", ""))
+    r.setdefault("tags", [])
+    return r
+
+
 def _parse_response(text: str) -> list[ScoredEvent]:
-    # Strip markdown fences if present
     text = re.sub(r"^```(?:json)?\s*", "", text.strip())
     text = re.sub(r"\s*```$", "", text.strip())
     data = json.loads(text)
-    return [ScoredEvent(**r) for r in data["results"]]
+    return [ScoredEvent(**_normalize_result(r)) for r in data["results"]]
 
 
 class ClaudeScorer:
@@ -49,28 +63,34 @@ class ClaudeScorer:
         user_msg = f"Evalúa estos {len(payload)} eventos:\n\n{json.dumps(payload, ensure_ascii=False, indent=2)}"
 
         async with semaphore:
-            try:
-                response = await self._client.messages.create(
-                    model=self._model,
-                    max_tokens=1024,
-                    system=[
-                        {
-                            "type": "text",
-                            "text": _SYSTEM_PROMPT,
-                            "cache_control": {"type": "ephemeral"},
-                        }
-                    ],
-                    messages=[{"role": "user", "content": user_msg}],
-                )
-                return _parse_response(response.content[0].text)
-            except Exception as exc:
-                print(f"  [scorer] batch error: {exc}")
-                # Return neutral scores so the pipeline doesn't break
-                return [
-                    ScoredEvent(id=f"ev_{idx:04d}", score=0, titulo_es=ev.evento,
-                                razon="Error al evaluar.", tags=[])
-                    for idx, ev in batch
-                ]
+            for attempt in range(3):
+                try:
+                    response = await self._client.messages.create(
+                        model=self._model,
+                        max_tokens=_MAX_TOKENS,
+                        system=[
+                            {
+                                "type": "text",
+                                "text": _SYSTEM_PROMPT,
+                                "cache_control": {"type": "ephemeral"},
+                            }
+                        ],
+                        messages=[{"role": "user", "content": user_msg}],
+                    )
+                    return _parse_response(response.content[0].text)
+                except anthropic.RateLimitError:
+                    wait = 30 * (attempt + 1)
+                    print(f"  [scorer] rate limit — esperando {wait}s…")
+                    await asyncio.sleep(wait)
+                except Exception as exc:
+                    print(f"  [scorer] batch error: {exc}")
+                    break
+            # Fallback: return zero scores so pipeline doesn't break
+            return [
+                ScoredEvent(id=f"ev_{idx:04d}", score=0, titulo_es=ev.evento,
+                            razon="Error al evaluar.", tags=[])
+                for idx, ev in batch
+            ]
 
     async def score_all(self, events: list[Event]) -> list[ScoredEvent]:
         indexed = list(enumerate(events))

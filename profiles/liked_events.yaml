@@ -1,0 +1,104 @@
+# Eventos que esta familia disfrutó mucho
+# Usados como referencia dorada para el scoring de Claude
+# Agregar más con el tiempo para mejorar la precisión
+
+liked_events:
+
+  - name: "Concierto JBalvin"
+    description: "Concierto de reggaeton en el Adidas Arena. Fuimos todos juntos."
+    why_loved: >
+      Música en español que nos ayudó a conectar con nuestra cultura latina.
+      La energía del público hispano en París fue increíble. Las dos hijas
+      cantaban todas las canciones. Nos sentimos en casa lejos de casa.
+    who_enjoyed: "toda la familia"
+    score_reference: 10
+    patterns:
+      - musica en español / portugues
+      - artista latinoamericano conocido
+      - reggaeton / cumbia / salsa / música urbana latina
+      - conexión cultural hispana
+      - concierto masivo con ambiente familiar
+
+  - name: "Concierto Grupo 5"
+    description: "Grupo de cumbia peruana. Vamos con mi esposa el 14 de junio."
+    why_loved: >
+      Cumbia peruana — nuestra música, nuestro idioma, nuestra identidad.
+      No es solo entretenimiento, es conexión con nuestras raíces peruanas.
+    who_enjoys: "pareja (esposa + padre)"
+    score_reference: 9
+    patterns:
+      - musica latinoamericana en español
+      - cumbia / música tropical
+      - artista latinoamericano
+      - conexión cultural peruana / hispana
+
+  - name: "Salon de l'Agriculture"
+    description: "Gran salón agrícola anual en Paris Expo. Fuimos en familia."
+    why_loved: >
+      Nos ayudó a conocer y entender la cultura francesa de una forma
+      muy accesible y entretenida. Los animales, los productos regionales,
+      la gastronomía. Las hijas adoraron ver los animales de granja.
+      Inmersivo, visual, para todos los niveles.
+    who_enjoyed: "toda la familia"
+    score_reference: 9
+    patterns:
+      - salon grand public (NO profesional)
+      - inmersivo y experiencial
+      - aprender sobre cultura francesa
+      - gastronomia / animales / naturaleza
+      - adecuado para niños y adultos
+
+  - name: "Salon du Chocolat"
+    description: "Gran salón del chocolate en Paris Expo."
+    why_loved: >
+      Descubrimiento gastronómico y cultural. Degustaciones, el proceso
+      de fabricación, el chocolate como arte. Las hijas quedaron fascinadas.
+      Inmersivo sin ser un museo aburrido.
+    who_enjoyed: "toda la familia"
+    score_reference: 8
+    patterns:
+      - salon grand public (NO profesional)
+      - gastronomia
+      - inmersivo y experiencial
+      - cultura francesa accesible
+      - actividad sensorial para niños
+
+  - name: "Exposición del Titanic"
+    description: "Exposición inmersiva sobre el Titanic. Mi esposa quiere ir."
+    why_loved: >
+      Historia contada de forma dramática e inmersiva. Artefactos reales,
+      reconstrucciones, narrativa emocional. El tipo de exposición que
+      engancha tanto a la teen como a los adultos por la historia y el misterio.
+    who_enjoys: "esposa + teen"
+    score_reference: 8
+    patterns:
+      - exposición inmersiva (no galería pasiva)
+      - historia + misterio + emoción
+      - narrativa dramática con objetos reales
+      - atractiva para adolescentes y adultos
+
+  - name: "SunnyDays / Zara Larsson (verano)"
+    description: "Festival de música pop al aire libre en verano en París."
+    why_loved: >
+      Festival de verano con artistas internacionales conocidos.
+      Al aire libre, ambiente festivo, música pop que la teen conoce.
+      El tipo de evento que hace que una adolescente quiera salir con la familia.
+    who_enjoys: "teen + esposa (+ familia)"
+    score_reference: 8
+    patterns:
+      - festival de verano al aire libre
+      - artista pop internacional conocido
+      - high energy / ambiente festivo
+      - muy atractivo para adolescentes
+      - tipo Lollapalooza / festival urbano
+
+disliked_events:
+  - name: "Salones profesionales B2B"
+    description: "Ferias de sector (mobiliario, franquicias, equipamiento industrial)"
+    why_disliked: "Sin interés para la familia. Solo para profesionales del sector."
+    score_reference: 0
+
+  - name: "Conferencias académicas"
+    description: "Ponencias y congresos científicos o políticos"
+    why_disliked: "Demasiado específico y pasivo. Sin componente participativo."
+    score_reference: 1
