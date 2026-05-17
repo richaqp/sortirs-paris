@@ -126,6 +126,7 @@ class ParisDataSource(AbstractSource):
 
                     lugar = rec.get("address_name") or "Paris"
                     costo = _format_price(rec.get("price_type") or "", rec.get("price_detail") or "")
+                    imagen = (rec.get("image_couverture") or rec.get("cover_url") or "").strip() or None
 
                     seen.add(url_ev)
                     try:
@@ -137,6 +138,7 @@ class ParisDataSource(AbstractSource):
                             tipo_publico=tipo,
                             link=url_ev,
                             costo=costo,
+                            imagen=imagen,
                             fuente="parisdata",
                         ))
                     except Exception:

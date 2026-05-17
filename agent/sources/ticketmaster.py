@@ -103,6 +103,13 @@ class TicketmasterSource(AbstractSource):
                     else:
                         costo = "TBA"
 
+                    # Best 16:9 image available
+                    images = ev.get("images") or []
+                    imagen = next(
+                        (img["url"] for img in images if img.get("ratio") == "16_9" and img.get("width", 0) >= 640),
+                        next((img["url"] for img in images), None),
+                    )
+
                     seen.add(url_ev)
                     try:
                         events.append(Event(
@@ -112,6 +119,7 @@ class TicketmasterSource(AbstractSource):
                             tipo_publico=tipo,
                             link=url_ev,
                             costo=costo,
+                            imagen=imagen,
                             fuente="ticketmaster",
                         ))
                     except Exception:
