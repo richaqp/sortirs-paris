@@ -1,0 +1,459 @@
+{
+  "week_id": "2026-W23",
+  "range_start": "2026-06-02",
+  "range_end": "2026-06-09",
+  "generated_at": "2026-06-05T04:13:13.721780Z",
+  "total_scraped": 493,
+  "total_scored": 22,
+  "events": [
+    {
+      "id": "manual_001",
+      "titulo_fr": "La Légende du Titanic — Expérience immersive",
+      "titulo_es": "La Leyenda del Titanic — Experiencia inmersiva",
+      "fecha_inicio": "2026-03-31",
+      "fecha_fin": "2026-08-31",
+      "lugar": "Grande Halle, Parc de la Villette (Métro: Porte de Pantin)",
+      "costo": "Desde 14.90€",
+      "tipo_publico": "Familia",
+      "link": "https://www.lavillette.com/manifestations/legende-titanic-25-26/",
+      "imagen": null,
+      "fuente": "manual",
+      "score": 9,
+      "razon": "3,000 m² de experiencia inmersiva con VR, artefactos reales, reconstrucción a escala del muelle de Southampton. Historia + emoción + tecnología — exactamente el formato que la familia adora (patrón Titanic). Ideal para la esposa y la teen. Ya atrajo +1 millón de visitantes en Europa.",
+      "tags": [
+        "inmersivo",
+        "familia",
+        "teen",
+        "museo"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0093",
+      "titulo_fr": "Concert du Wonder Brass Quartet - parvis du 148",
+      "titulo_es": "Concert du Wonder Brass Quartet - parvis du 148",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Parvis, Espace culturel du 148",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/concert-du-wonder-brass-quartet-parvis-du-148-110374",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/04/20/huge-80a49e1a0d6695b54188a574b46aa619.jpg",
+      "fuente": "parisdata",
+      "score": 8,
+      "razon": "Evento de ciencia ideal para despertar la curiosidad de las dos hijas.",
+      "tags": [
+        "ciencia",
+        "musica",
+        "museo"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0121",
+      "titulo_fr": "\"Flames To Dust\" de L. Camus-Govoroff : soirée de performance, concert et lecture-atelier",
+      "titulo_es": "\"Flames To Dust\" de L. Camus-Govoroff : soirée de performance, concert et lecture-atelier",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "École municipale des Beaux-Arts - Galerie Édouard-Manet",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/exposition-de-l-camus-govoroff-le-bruit-des-larmes-109827",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/04/13/huge-25c603d044f8c1470e98f485138085d8.jpg",
+      "fuente": "parisdata",
+      "score": 8,
+      "razon": "Música en vivo siempre es una buena salida familiar.",
+      "tags": [
+        "musica",
+        "taller",
+        "museo"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0133",
+      "titulo_fr": "Atelier potager en famille – Festival du Mieux Manger",
+      "titulo_es": "Atelier potager en famille – Festival du Mieux Manger",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Bibliothèque Maurice Genevoix",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/atelier-potager-en-famille-festival-du-mieux-manger-110271",
+      "imagen": "https://cdn.paris.fr/qfapv4/2024/06/03/huge-c1b2fd396375359a6c19c3e2b5080de4.jpg",
+      "fuente": "parisdata",
+      "score": 8,
+      "razon": "Taller práctico y creativo pensado para niños — tu hija pequeña va a disfrutarlo mucho.",
+      "tags": [
+        "taller",
+        "festival",
+        "nina"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "manual_002",
+      "titulo_fr": "AccroCamp Rueil-Malmaison — Parcours acrobranche en forêt",
+      "titulo_es": "AccroCamp Rueil-Malmaison — Circuito de cuerdas en el bosque",
+      "fecha_inicio": "2026-05-25",
+      "fecha_fin": "2026-08-31",
+      "lugar": "Centre Sportif Vert-Bois, 1000 Côte de la Jonchère, 92500 Rueil-Malmaison",
+      "costo": "Desde 20€",
+      "tipo_publico": "Familia",
+      "link": "https://www.accrocamp.fr/",
+      "imagen": null,
+      "fuente": "manual",
+      "score": 8,
+      "razon": "Circuito de cuerdas y tirolesas en pleno bosque de Rueil-Malmaison. Múltiples niveles de dificultad para las dos hijas (7-12 y teen) y los padres. Aventura al aire libre garantizada — el tipo de actividad que hace que todos vuelvan con adrenalina y ganas de repetir.",
+      "tags": [
+        "aire-libre",
+        "deporte",
+        "familia",
+        "nina",
+        "teen"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0475",
+      "titulo_fr": "BÉBÉ CONCERTS",
+      "titulo_es": "BÉBÉ CONCERTS",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "THEATRE DE L'ATELIER",
+      "costo": "TBA",
+      "tipo_publico": "Familia",
+      "link": "https://www.ticketmaster.fr/fr/manifestation/bebe-concerts-billet/idmanif/629592/idtier/18864121",
+      "imagen": "https://s1.ticketm.net/dam/c/1e5/abd7fc37-5fce-4756-ba3e-52fc9c4021e5_106221_RETINA_PORTRAIT_16_9.jpg",
+      "fuente": "ticketmaster",
+      "score": 7,
+      "razon": "Taller práctico y creativo pensado para niños — tu hija pequeña va a disfrutarlo mucho.",
+      "tags": [
+        "musica",
+        "taller",
+        "nina"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0011",
+      "titulo_fr": "Festival du mieux manger : le rendez-vous de l'alimentation et de l'agriculture durables",
+      "titulo_es": "Festival du mieux manger : le rendez-vous de l'alimentation et de l'agriculture durables",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": "2026-06-14",
+      "lugar": "Paris",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/festival-du-mieux-manger-21425",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/05/20/huge-51ae5b80550a4aacd69af8fb736df4aa.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "El ambiente festivo lo hace disfrutable para todas las edades.",
+      "tags": [
+        "museo",
+        "festival"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0032",
+      "titulo_fr": "Venez fêter le premier anniversaire de QJ 13 !",
+      "titulo_es": "Venez fêter le premier anniversaire de QJ 13 !",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Quartier Jeunes 13 (QJ 13)",
+      "costo": "Gratuito",
+      "tipo_publico": "Deportivo",
+      "link": "https://www.paris.fr/evenements/venez-feter-le-premier-anniversaire-de-qj-13-113077",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/06/03/huge-e47a456c84152dd545fe67611bb0a86e.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "El ambiente festivo lo hace disfrutable para todas las edades.",
+      "tags": [
+        "festival",
+        "teen"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0057",
+      "titulo_fr": "Festival de l'habitat",
+      "titulo_es": "Festival de l'habitat",
+      "fecha_inicio": "2026-06-05",
+      "fecha_fin": "2026-06-06",
+      "lugar": "Galerie Joseph",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/festival-de-l-habitat-112307",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/05/26/huge-6b68f0d9f6683e717c75e0906da823bd.png",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "El ambiente festivo lo hace disfrutable para todas las edades.",
+      "tags": [
+        "museo",
+        "festival"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0066",
+      "titulo_fr": "Week-end en famille, George Sand à hauteur d’enfant",
+      "titulo_es": "Week-end en famille, George Sand à hauteur d’enfant",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": "2026-06-07",
+      "lugar": "Musée de la Vie romantique, Hôtel Scheffer-Renan",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/week-end-en-famille-george-sand-a-hauteur-d-enfant-112436",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/05/27/huge-7f00c7099f4b90153bf58b0ff7510dea.png",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Actividad pensada especialmente para niños y familias.",
+      "tags": [
+        "museo",
+        "nina"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0076",
+      "titulo_fr": "Visite de l’exposition « Ici grand ouvert »",
+      "titulo_es": "Visite de l’exposition « Ici grand ouvert »",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "MAC VAL - Musée d'art contemporain du Val-de-Marne",
+      "costo": "Gratuito",
+      "tipo_publico": "Adolescentes",
+      "link": "https://www.paris.fr/evenements/visite-de-l-exposition-ici-grand-ouvert-112609",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/05/28/huge-c725c821bd6934d950c0847f69aeb438.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Evento cultural en París que puede ser interesante para la familia.",
+      "tags": [
+        "museo",
+        "teen"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0078",
+      "titulo_fr": "Représentation d' \"Amours\" par Muchmuche company",
+      "titulo_es": "Représentation d' \"Amours\" par Muchmuche company",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Parvis du Pôle Culturel",
+      "costo": "Gratuito",
+      "tipo_publico": "Adolescentes",
+      "link": "https://www.paris.fr/evenements/representation-d-amours-par-muchmuche-company-110386",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/04/20/huge-d9c255650a176eed8d1ceffed49c7eb6.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Evento cultural en París que puede ser interesante para la familia.",
+      "tags": [
+        "museo",
+        "teen"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0079",
+      "titulo_fr": "Rueil Festival",
+      "titulo_es": "Rueil Festival",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Parc des Bords-de-Seine",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/rueil-festival-110124",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/04/16/huge-23427808da412b36426afbb42f370487.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Festival al aire libre para toda la familia. Ambiente festivo garantizado.",
+      "tags": [
+        "aire-libre",
+        "festival"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0094",
+      "titulo_fr": "Rueil Festival",
+      "titulo_es": "Rueil Festival",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Parc des Bords-de-Seine",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/rueil-festival-109742",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/04/10/huge-e6495926a1187d4229c064e6cc6246aa.png",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Festival al aire libre para toda la familia. Ambiente festivo garantizado.",
+      "tags": [
+        "aire-libre",
+        "festival"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0100",
+      "titulo_fr": "Un mini festival à Rueil-Malmaison",
+      "titulo_es": "Un mini festival à Rueil-Malmaison",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Parc des Bords-de-Seine",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/un-mini-festival-a-rueil-malmaison-109720",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/04/10/huge-df71d91bd00520a97de821b4bbd40f32.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Festival al aire libre para toda la familia. Ambiente festivo garantizado.",
+      "tags": [
+        "aire-libre",
+        "festival"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0104",
+      "titulo_fr": "Les Filles d'Olfa, César du meilleur documentaire 2024 à Porte de Vanves",
+      "titulo_es": "Les Filles d'Olfa, César du meilleur documentaire 2024 à Porte de Vanves",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Centre socioculturel Maurice Noguès",
+      "costo": "Gratuito",
+      "tipo_publico": "Adolescentes",
+      "link": "https://www.paris.fr/evenements/les-filles-d-olfa-cesar-du-meilleur-documentaire-2024-a-porte-de-vanves-111410",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/05/07/huge-0a671d151f9af04cb7067f91288d5251.png",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Evento cultural en París que puede ser interesante para la familia.",
+      "tags": [
+        "museo",
+        "teen"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0114",
+      "titulo_fr": "Performance dansée d’Alice Anderson « Healing Session »",
+      "titulo_es": "Performance dansée d’Alice Anderson « Healing Session »",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "MAC VAL - Musée d'art contemporain du Val-de-Marne",
+      "costo": "Gratuito",
+      "tipo_publico": "Adolescentes",
+      "link": "https://www.paris.fr/evenements/performance-dansee-d-alice-anderson-healing-session-112601",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/05/28/huge-614dc3208041fe26778c93d24a0270bc.png",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Evento cultural en París que puede ser interesante para la familia.",
+      "tags": [
+        "museo",
+        "teen"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0122",
+      "titulo_fr": "« Rendez-vous aux jardins » au musée des Plans-Reliefs",
+      "titulo_es": "« Rendez-vous aux jardins » au musée des Plans-Reliefs",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": "2026-06-07",
+      "lugar": "Musée des Plans-Reliefs",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/rendez-vous-aux-jardins-au-musee-des-plans-reliefs-84998",
+      "imagen": "https://cdn.paris.fr/qfapv4/2025/05/05/huge-d3b755cc9bb97c166e1bdbb679e5dd8c.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Plan al aire libre, perfecto para desconectar y explorar juntos.",
+      "tags": [
+        "aire-libre",
+        "museo"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0128",
+      "titulo_fr": "Atelier en famille : Familles d’artistes \"Mode aléatoire\"",
+      "titulo_es": "Atelier en famille : Familles d’artistes \"Mode aléatoire\"",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Frac Île-de-France Les Réserves",
+      "costo": "gratuit, sur réservation",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/atelier-en-famille-familles-d-artistes-mode-aleatoire-110229",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/04/17/huge-e88636b9c1d0859415c0fdb8b3aa3767.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Taller práctico y creativo pensado para niños — tu hija pequeña va a disfrutarlo mucho.",
+      "tags": [
+        "taller",
+        "nina"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0131",
+      "titulo_fr": "Concert littéraire autour du thème de l'amour - Médiathèque d'Alfortville",
+      "titulo_es": "Concert littéraire autour du thème de l'amour - Médiathèque d'Alfortville",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "Médiathèque Simone Veil, Pôle Culturel",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/concert-litteraire-autour-du-theme-de-l-amour-mediatheque-d-alfortville-110325",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/04/20/huge-52b6247b10bbeddd977e4d2e78ddf236.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Música en vivo siempre es una buena salida familiar.",
+      "tags": [
+        "musica",
+        "museo"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0145",
+      "titulo_fr": "Visite en famille de l’exposition « Le genre idéal »",
+      "titulo_es": "Visite en famille de l’exposition « Le genre idéal »",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "MAC VAL - Musée d'art contemporain du Val-de-Marne",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/visite-en-famille-de-l-exposition-le-genre-ideal-112608",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/05/28/huge-258069cbe6762890298cbe65e22594cd.jpg",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Actividad pensada especialmente para niños y familias.",
+      "tags": [
+        "museo",
+        "nina"
+      ],
+      "disponibilidad": null
+    },
+    {
+      "id": "ev_0146",
+      "titulo_fr": "Spectacle « Histoires manquantes, petits contes inclusifs pour grandes sociétés » de la Cie Lemon fracas / Sigrid Carré-Lecoindre et Agathe de Courcy",
+      "titulo_es": "Spectacle « Histoires manquantes, petits contes inclusifs pour grandes sociétés » de la Cie Lemon fracas / Sigrid Carré-Lecoindre et Agathe de Courcy",
+      "fecha_inicio": "2026-06-06",
+      "fecha_fin": null,
+      "lugar": "MAC VAL - Musée d'art contemporain du Val-de-Marne",
+      "costo": "Gratuito",
+      "tipo_publico": "Familia",
+      "link": "https://www.paris.fr/evenements/spectacle-histoires-manquantes-petits-contes-inclusifs-pour-grandes-societes-de-la-cie-lemon-fracas-sigrid-carre-lecoindre-et-agathe-de-courcy-112591",
+      "imagen": "https://cdn.paris.fr/qfapv4/2026/05/28/huge-923acb9109f086ea0b959c792c5efaf4.png",
+      "fuente": "parisdata",
+      "score": 6,
+      "razon": "Actividad pensada especialmente para niños y familias.",
+      "tags": [
+        "museo",
+        "nina"
+      ],
+      "disponibilidad": null
+    }
+  ]
+}
