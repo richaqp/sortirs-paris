@@ -1,0 +1,32 @@
+{
+  "week_id": "2026-W26",
+  "range_start": "2026-06-22",
+  "range_end": "2026-06-29",
+  "generated_at": "2026-06-21T06:05:41.843947Z",
+  "total_scraped": 0,
+  "total_scored": 1,
+  "events": [
+    {
+      "id": "manual_001",
+      "titulo_fr": "La Légende du Titanic — Expérience immersive",
+      "titulo_es": "La Leyenda del Titanic — Experiencia inmersiva",
+      "fecha_inicio": "2026-03-31",
+      "fecha_fin": "2026-08-31",
+      "lugar": "Grande Halle, Parc de la Villette (Métro: Porte de Pantin)",
+      "costo": "Desde 14.90€",
+      "tipo_publico": "Familia",
+      "link": "https://www.lavillette.com/manifestations/legende-titanic-25-26/",
+      "imagen": null,
+      "fuente": "manual",
+      "score": 9,
+      "razon": "3,000 m² de experiencia inmersiva con VR, artefactos reales, reconstrucción a escala del muelle de Southampton. Historia + emoción + tecnología — exactamente el formato que la familia adora (patrón Titanic). Ideal para la esposa y la teen. Ya atrajo +1 millón de visitantes en Europa.",
+      "tags": [
+        "inmersivo",
+        "familia",
+        "teen",
+        "museo"
+      ],
+      "disponibilidad": null
+    }
+  ]
+}
